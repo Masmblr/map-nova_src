@@ -1,0 +1,325 @@
+nova/esparks
+{
+	ejector
+	{
+		particle
+		{
+			displacement 0 0 20 ~5
+			velocityType static
+			velocityDir linear
+			velocityMagnitude 500000~3%
+			velocity 0 0 1 ~100
+			accelerationType static
+			accelerationDir linear
+			accelerationMagnitude 150
+			acceleration 1 1 1 0
+			radius 0 10.0 2.0
+			alpha  0 0.8 0.0
+			rotation 0 ~360 -
+			lifeTime 400~50%
+			dynamicLight 50 500 50 { 0 0.3 1 }
+			bounce 0.01
+			bounceSound	~1 sounds/nova/esparks_02.wav
+			childTrailSystem models/weapons/lev2zap/lightning
+			onDeathSystem nova/esparks_smoke
+			overdrawProtection
+		}
+		count infinite
+		delay 0
+		period 1200 - ~32%
+	}
+}
+
+nova/esparks_smoke
+{
+	ejector
+	{
+		particle
+		{
+			shader sync textures/nova/smoke_01
+			displacement 0 0 0 ~0
+			velocityType static
+			velocityDir linear
+			velocityMagnitude 0
+			velocity 0 0 1 ~1
+			accelerationType static
+			accelerationDir linear
+			accelerationMagnitude 50
+			acceleration 0 0 0 ~1
+			radius 0 50.0 50.0
+			alpha 0 0.2 0.0
+			rotation 0 ~360 -
+			lifeTime 3200~50%
+		}
+		count 1
+		delay 0
+		period 3000 - ~0%
+	}
+}
+
+nova/astroids
+{
+	ejector
+	{
+		particle
+		{
+			displacement -256 -256 -256 ~512
+			velocityType static
+			velocityDir linear
+			velocity 0 -1 -0.25 ~5
+			velocityMagnitude 2000~100
+			bounce cull
+			radius 0 0 -
+			alpha 0 0 -
+			lifeTime 10000
+			overdrawProtection
+			cullOnStartSolid
+			dynamicLight 0 300 0 { 1.0 0.75 0.0 }
+			childTrailSystem nova/astroids_trail
+			onDeathSystem nova/esparks_smoke
+		}
+		delay 0
+		count infinite
+		period 600 - ~100%
+	}
+}
+
+nova/astroids_impact
+{
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/sprites/spark.tga
+			radius 0 50 0
+			alpha  0 1 0
+			lifeTime 200
+			overdrawProtection
+		}
+		count 3
+		delay 0
+		period 0 - ~0%
+	}
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/sprites/spark.tga
+			radius 0 20 0
+			alpha  0 1 0
+			lifeTime 3000
+			overdrawProtection
+
+		}
+		count 1
+		delay 0
+		period 0 - ~0%
+	}
+	ejector
+	{
+		particle
+		{
+			shader sync gfx/marks/bullet_mrk.tga
+			radius 0 8 0
+			lifeTime 800
+			overdrawProtection
+		}
+		count 1
+		delay 3200
+		period 0 - ~0%
+	}
+	ejector
+	{
+		particle
+		{
+			shader sync textures/nova/smoke_01
+			accelerationType static
+			accelerationDir linear
+			accelerationMagnitude 200
+			acceleration 0 0 0 0
+			radius 0 5 25
+			alpha  0 0.5 0
+			bounce 0
+			lifeTime 800
+			overdrawProtection
+		}
+		count 3
+		delay 100
+		period 0 - ~0%
+  }
+}
+
+nova/sparks_down
+{
+	ejector
+	{
+		particle
+		{
+			shader sync textures/nova/spark
+			displacement 0 0 0 ~3
+			velocityType static
+			velocityDir linear
+			velocity 0 0 -1 ~150
+			velocityMagnitude 100
+			accelerationType static
+			accelerationDir linear
+			acceleration 0 0 -1 ~25
+			accelerationMagnitude 	300
+			bounce 0.5
+			radius 0 1 1
+			alpha 0 .5 .0
+			rotation 0 0 ~360
+			lifeTime 2000
+			overdrawProtection
+		}
+		particle
+		{
+			shader sync textures/nova/spark
+			displacement 0 0 0 ~5
+			velocityType static
+			velocityDir linear
+			velocity 0 0 -1 ~150
+			velocityMagnitude 100
+			accelerationType static
+			accelerationDir linear
+			acceleration 0 0 -1 ~25
+			accelerationMagnitude 300
+			bounce 0.1
+			radius 0 1 1
+			alpha 0 .5 .0
+			rotation 0 0 ~360
+			lifeTime 2500
+			overdrawProtection
+		}
+		particle
+		{
+			shader sync textures/nova/spark
+			displacement 0 0 0 ~5
+			velocityType static
+			velocityDir linear
+			velocity 0 0 -1 ~150
+			velocityMagnitude 100
+			accelerationType static
+			accelerationDir linear
+			acceleration 0 0 -1 ~25
+			accelerationMagnitude 300
+			bounce 0.2
+			radius 0 1 1
+			alpha 0 .5 .0
+			rotation 0 0 ~360
+			lifeTime 1200
+			overdrawProtection
+		}
+		particle
+		{
+			shader sync textures/nova/spark
+			displacement 0 0 0 ~5
+			velocityType static
+			velocityDir linear
+			velocity 0 0 -1 ~150
+			velocityMagnitude 100
+			accelerationType static
+			accelerationDir linear
+			acceleration 0 0 -1 ~25
+			accelerationMagnitude 300
+			bounce 0.4
+			radius 0 1 1
+			alpha 0 .5 .0
+			rotation 0 0 ~360
+			lifeTime 900
+			overdrawProtection
+		}
+		count infinite
+		delay 0
+		period 4500 - ~20%
+	}
+}
+
+nova/ship_crash_smoke
+{
+	ejector
+	{
+		particle
+		{
+			shader sync textures/nova/smoke_01
+			displacement 0 0 0 ~1.9
+			velocityType static
+			velocityDir linear
+			velocityMagnitude 10
+			velocity 0.0 0.1 0.1 ~0.1
+			accelerationType static
+			accelerationDir linear
+			acceleration -0.04 0 0.05 ~0.2
+			accelerationMagnitude	5
+			radius 0 50 400
+			alpha 0 0.8 0.0
+			rotation 0 ~360 ~360
+			bounce 0.0
+			realLight 
+			cullOnStartSolid 
+			overdrawProtection 
+			lifeTime 18000
+			dynamicLight 0 0 0 { 1 0.746456 0.188357 }
+		}
+		count infinite
+		delay 0
+		period 2500 - ~0%
+	}
+}
+
+nova/ship_crash_smoke_maindoor_left
+{
+	ejector
+	{
+		particle
+		{
+			shader sync textures/nova/smoke_01
+			displacement 0 0 0 0
+			velocityType static
+			velocityDir linear
+			velocityMagnitude 45
+			velocity 0 0 -1  ~15
+			accelerationType static
+			accelerationDir linear
+			acceleration 15 5 -1 ~5
+			accelerationMagnitude 25
+			radius 0 5 40
+			alpha 250 .5 0
+			rotation 0 ~360 ~360
+			bounce 0.0
+			lifeTime 2000
+		}
+		count infinite
+		delay 0
+		period 45 - ~0%
+	}
+}
+
+nova/ship_crash_smoke_maindoor_right
+{
+	ejector
+	{
+		particle
+		{
+			shader sync textures/nova/smoke_01
+			displacement 0 0 0 0
+			velocityType static
+			velocityDir linear
+			velocityMagnitude 45
+			velocity 0 0 -1  ~15
+			accelerationType static
+			accelerationDir linear
+			acceleration 15 -5 -1 ~5
+			accelerationMagnitude 25
+			radius 0 5 40
+			alpha 250 .5 0
+			rotation 0 ~360 ~360
+			bounce 0.0
+			lifeTime 2000
+		}
+		count infinite
+		delay 0
+		period 45 - ~0%
+	}
+}
+

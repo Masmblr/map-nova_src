@@ -1,0 +1,12 @@
+nova/astroids_trail
+{
+	beam 
+	{
+		shader textures/nova/spark_trail
+		segments 1
+		segmentTime 500
+		alpha 1 0
+		width 1 1
+	}
+} 
+
