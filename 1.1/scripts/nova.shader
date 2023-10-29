@@ -1215,7 +1215,7 @@ models/mapobjects/monitor/display_roq_03
 	{
 		map models/mapobjects/monitor/load.jpg
 		rgbGen identity
-		tcMod rotate 100 100
+		tcMod rotate 100
 		blendFunc add
 	}
 }
