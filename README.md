@@ -85,7 +85,7 @@ Link: [Alpha test video (youtube.com)](https://www.youtube.com/embed/ZKeaCfR5ftQ
 | Version: | Date:        | Status: |   
 | ------- | ------------- | ------: |
 | 1.0     | 22/05/2016  | beta |
-| 1.1     | 24/05/2016  | final |
+| 1.1     | 24/05/2016  | release |
 
 ## How-To
 **Binary**:
