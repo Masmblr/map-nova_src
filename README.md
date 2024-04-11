@@ -82,10 +82,10 @@ Mission Briefing Screen: </br>
 Link: [Alpha test video (youtube.com)](https://www.youtube.com/embed/ZKeaCfR5ftQ?si=YDvG39k6NBxj_eqj)
 
 ## Version History:
-| Version: | Date:        | Status: | Release Build (.pk3):       
-| ------- | ------------- | ------: | -----------------: |
-| 1.0     | 22/05/2016  | beta | :x:        |     
-| 1.1     | 24/05/2016  | final | [💾](https://github.com/Masmblr/map-Nova_src/releases/) |
+| Version: | Date:        | Status: |   
+| ------- | ------------- | ------: |
+| 1.0     | 22/05/2016  | beta |
+| 1.1     | 24/05/2016  | final |
 
 ## How-To
 **Binary**:
@@ -241,7 +241,7 @@ textures\nova\vent_01.jpg <sup>[1](#Credit-1)</sup>
 
 ### Credit-1
 
-[Matthias "Masmblr Peters"](mailto:masmblr@gmail.com) \
+[Matthias "Masmblr" Peters](mailto:masmblr@gmail.com) \
 Content: Map, Textures, Shaders \
 License: [MIT License](https://opensource.org/license/mit/).
 (See "LICENSE" file for more Informations.)
